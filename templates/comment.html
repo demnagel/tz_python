@@ -1,0 +1,40 @@
+<section class='container'>
+    <h1>Оставьте свой комментарий</h1>
+    <form class="main_form" action="/sendform" method="get">
+        <span class='mess'>* подчеркнутые поля являются обязательными</span>
+        <div class='form_row'>
+            <label for='name'>Имя</label>
+            <input id='name' class='form_field required_field' type="text" name="name" maxlength='25' required/>
+        </div>
+        <div class='form_row'>
+            <label for='surname'>Фамилия</label>
+            <input id='surname' class='form_field required_field' type="text" name="surname" maxlength='25' required/>
+        </div>
+        <div class='form_row'>
+            <label for='patronymic'>Отчество</label>
+            <input id='patronymic' class='form_field' type="text" name="patronymic" maxlength='25'/>
+        </div>
+        <div class='form_row'>
+            <label for="region_id">Регион</label>
+            <select id='region_id' class='form_field' name="region_id">
+                {region}
+            </select>
+        </div>
+        <div class='form_row'>
+            <label for='city_id'>Город</label>
+            <select id='city_id' class='form_field' name="city_id">
+                {city}
+            </select>
+        </div>
+        <div class='form_row'>
+            <label for='mask'>Телефон</label>
+            <input class='form_field' id="mask" type="text" name="phone" placeholder="+7(___)-___-__-__" autocomplete='off'/>
+        </div>
+        <div class='form_row'>
+            <label for='email'>Email</label>
+            <input id='email' class='form_field' type="email" name="email" maxlength='25'/>
+        </div>
+        <textarea class='text_comment required_field' name="comment" maxlength='400' required placeholder="Оставьте свой комментарий..."></textarea>
+        <input class='btn btn--standart' type="submit" name="send_comment" value="Отправить"/>
+    </form>
+</section>
